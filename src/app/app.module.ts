@@ -10,11 +10,20 @@ import { StudentComponent } from './student/student.component';
 import { MentorComponent } from './mentor/mentor.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { FooterComponent } from './footer/footer.component';
+
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule, MatButtonModule, MatInputModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
     ])
@@ -26,7 +35,8 @@ import { SignupComponent } from './signup/signup.component';
     StudentComponent,
     MentorComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    FooterComponent
     
   ],
   bootstrap: [ AppComponent ]
